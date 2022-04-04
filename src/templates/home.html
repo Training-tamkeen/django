@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Home Page Template</h1>
+<p>Hello there.........</p>
+<p>{{my_text}}</p>
+<ul>
+    {{list}}
+    {% for item in list %}
+        {% if item == 3 %}      
+            <p>condition is right</p>
+        {% endif %}
+        <li>loop index:{{ forloop.counter }} - list item:{{item}}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
